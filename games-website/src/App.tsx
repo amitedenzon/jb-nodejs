@@ -1,24 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { GameCard } from './components/GameArea/GameCard/GameCard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome to our games website</h1>
+      <p>Here you can find many games</p>
+      <GameCard/>
     </div>
   );
 }
