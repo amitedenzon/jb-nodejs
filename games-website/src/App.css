@@ -1,10 +1,11 @@
-h1{
+.App > h1{
   text-align:center;
   color:cadetblue;
 }
 
-p{
+.App > p{
   color:azure;
   text-align:center;
   font-size: large;
+  background-color: darkolivegreen;
 }

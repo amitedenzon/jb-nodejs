@@ -1,12 +1,19 @@
 import './App.css';
-import { GameCard } from './components/GameArea/GameCard/GameCard';
+import { Staff } from './Components/EmployeeArea/Staff/Staff';
+import { GameCard } from './Components/GameArea/GameCard/GameCard';
+import { Sale } from './Components/GameArea/Sale/Sale';
+import { Copyright } from './Components/LayoutArea/Copyright/Copyright';
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to our games website</h1>
       <p>Here you can find many games</p>
-      <GameCard/>
+      <GameCard />
+      <Staff />
+      <br />
+      <Sale />
+      <Copyright />
     </div>
   );
 }
