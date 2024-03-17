@@ -1,9 +1,0 @@
-{
-    "mysql": {
-        "host": "mysql"
-    },
-    "usersSymbolsService": {
-        "host": "host.docker.internal"
-    }
-
-}
