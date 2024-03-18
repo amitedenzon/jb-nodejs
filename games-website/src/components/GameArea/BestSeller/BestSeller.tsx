@@ -20,10 +20,9 @@ export function BestSeller(): JSX.Element {
 		<div>
 			<div className={css.BestSeller}>
 				<button onClick={show}>Show Best Seller</button>
+				<button onClick={hide}>Hide Best Seller</button>
 				<br />
 				<span>Best Seller: {bestSeller}</span>
-				<br />
-				<button onClick={hide}>Hide Best Seller</button>
 			</div>
 			<div className={css.BestSeller}>
 				<button

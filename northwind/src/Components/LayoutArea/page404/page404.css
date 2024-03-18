@@ -1,0 +1,17 @@
+/* @font-face {
+	font-family: "Futura";
+	src: url("../../../Assets/fonts/Futura.ttc") format("truetype");
+} */
+
+.page404 {
+	justify-content: center;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	color: lightsteelblue;
+}
+
+h3 {
+	font-size: small;
+	font-weight: bold;
+}

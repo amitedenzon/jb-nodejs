@@ -1,11 +1,23 @@
-.App > h1{
-  text-align:center;
-  color:cadetblue;
+.App > h1 {
+	text-align: center;
+	color: cadetblue;
 }
 
-.App > p{
-  color:azure;
-  text-align:center;
-  font-size: large;
-  background-color: darkolivegreen;
+.App > p {
+	color: azure;
+	text-align: center;
+	font-size: large;
+	background-color: darkolivegreen;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 5px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
 }

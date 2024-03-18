@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "Casad-Serial-Heavy";
+	src: url("../../../Assets/fonts/Casad-Serial-Heavy.ttf") format("truetype");
+}
+
+.SiteHeader {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Casad-Serial-Heavy", sans-serif;
+	font-size: x-large;
+}
