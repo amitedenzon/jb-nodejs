@@ -1,0 +1,178 @@
+@font-face {
+	font-family: "Futura";
+	src: url("../../../Assets/fonts/Futura.ttc") format("truetype");
+}
+
+.ProductDetails {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.ProductDetails .details {
+	background-color: rgb(60, 67, 79);
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid snow;
+	border-radius: 30px;
+}
+
+.ProductDetails .details .header {
+	font-size: x-large;
+	font-weight: bolder;
+	padding-bottom: 30px;
+}
+
+.ProductDetails .buttonList {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.ProductDetails .button {
+	background-color: rgb(60, 67, 79);
+	margin: 10px;
+	width: 120px;
+	padding: 10px;
+	border: 1px solid snow;
+	margin-top: 6%;
+	border-radius: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Futura", sans-serif;
+}
+
+.ProductDetails .button a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ProductDetails .button a span {
+	padding-right: 10px;
+}
+
+.ProductDetails .button a:hover {
+	color: snow;
+}
+
+.gg-arrow-left {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	transform: scale(var(--ggs, 1));
+	width: 22px;
+	height: 22px;
+}
+
+.gg-arrow-left::after,
+.gg-arrow-left::before {
+	content: "";
+	display: block;
+	box-sizing: border-box;
+	position: absolute;
+	left: 3px;
+}
+
+.gg-arrow-left::after {
+	width: 8px;
+	height: 8px;
+	border-bottom: 2px solid;
+	border-left: 2px solid;
+	transform: rotate(45deg);
+	bottom: 7px;
+}
+
+.gg-arrow-left::before {
+	width: 16px;
+	height: 2px;
+	bottom: 10px;
+	background: currentColor;
+}
+
+.gg-edit-markup {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	transform: scale(var(--ggs, 1));
+	width: 22px;
+	height: 22px;
+	border: 2px solid;
+	border-radius: 22px;
+	overflow: hidden;
+	perspective: 20px;
+}
+
+.gg-edit-markup::after,
+.gg-edit-markup::before {
+	content: "";
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.gg-edit-markup::before {
+	width: 0;
+	height: 6px;
+	border-bottom: 6px solid;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	bottom: 9px;
+	left: 6px;
+}
+
+.gg-edit-markup::after {
+	width: 10px;
+	height: 12px;
+	border: 2px solid;
+	border-top: 4px solid;
+	border-bottom: 0;
+	bottom: 0;
+	left: 4px;
+	transform: rotateX(60deg);
+}
+
+.gg-trash {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	transform: scale(var(--ggs, 1));
+	width: 10px;
+	height: 12px;
+	border: 2px solid transparent;
+	box-shadow: 0 0 0 2px, inset -2px 0 0, inset 2px 0 0;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	margin-top: 4px;
+	margin-left: 5px;
+}
+
+.gg-trash::after,
+.gg-trash::before {
+	content: "";
+	display: block;
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.gg-trash::after {
+	background: currentColor;
+	border-radius: 3px;
+	width: 16px;
+	height: 2px;
+	top: -4px;
+	left: -5px;
+}
+
+.gg-trash::before {
+	width: 10px;
+	height: 4px;
+	border: 2px solid;
+	border-bottom: transparent;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	top: -7px;
+	left: -2px;
+}

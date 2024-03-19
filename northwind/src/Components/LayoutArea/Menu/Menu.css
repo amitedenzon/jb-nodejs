@@ -17,11 +17,13 @@
 	color: snow;
 }
 
-.special {
+.Menu a {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+}
+
+.Menu > a > i {
+	margin-left: 10px;
 }
 
 .gg-home-alt {
@@ -134,4 +136,28 @@
 	width: 22px;
 	left: -2px;
 	top: 4px;
+}
+.gg-math-plus,
+.gg-math-plus::after {
+	display: block;
+	box-sizing: border-box;
+	background: currentColor;
+	border-radius: 10px;
+}
+
+.gg-math-plus {
+	margin-top: -2px;
+	position: relative;
+	transform: scale(var(--ggs, 1));
+	width: 16px;
+	height: 2px;
+}
+
+.gg-math-plus::after {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 16px;
+	top: -7px;
+	left: 7px;
 }

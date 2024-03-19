@@ -1,0 +1,45 @@
+@font-face {
+	font-family: "Futura";
+	src: url("../../../Assets/fonts/Futura.ttc") format("truetype");
+}
+
+@font-face {
+	font-family: "Casad-Serial-Heavy";
+	src: url("../../../Assets/fonts/Casad-Serial-Heavy.ttf") format("truetype");
+}
+
+.AddProduct {
+	font-family: "Futura", sans-serif;
+}
+
+.AddProduct h2 {
+	font-family: "Casad-Serial-Heavy", sans-serif;
+}
+
+.AddProduct > form {
+	width: 400px;
+	border: 1px solid;
+	text-align: left;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: rgb(60, 67, 79);
+}
+
+.AddProduct input,
+.AddProduct button {
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	font-size: larger;
+}
+
+.AddProduct h2 {
+	text-align: center;
+}
+
+.AddProduct .err {
+	color: red;
+	position: absolute;
+	margin-left: 30px;
+}

@@ -1,0 +1,25 @@
+.ProductCard {
+	width: 400px;
+	display: inline-flex;
+	background-color: rgb(60, 67, 79);
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid snow;
+	border-radius: 10px;
+	text-align: left;
+	justify-content: space-evenly;
+}
+
+.ProductCard > div:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.ProductCard > div:last-child {
+	margin-left: auto;
+}
+
+.ProductCard img {
+	width: 100px;
+}
