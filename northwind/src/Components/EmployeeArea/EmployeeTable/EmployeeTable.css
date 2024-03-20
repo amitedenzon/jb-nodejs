@@ -1,3 +1,15 @@
-.EmployeeTable {
-	
+.EmployeeTable > table {
+	margin: 20px auto;
+}
+
+.EmployeeTable table,
+.EmployeeTable th,
+.EmployeeTable td {
+	border: 1px solid snow;
+	border-collapse: collapse;
+	background-color: rgb(60, 67, 79);
+}
+
+.EmployeeTable th {
+	padding: 10px;
 }

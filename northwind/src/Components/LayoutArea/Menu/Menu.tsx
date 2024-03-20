@@ -5,19 +5,40 @@ import "./Menu.css";
 export function Menu(): JSX.Element {
 	const [isProductsActive, setIsProductsActive] = useState(false);
 	const [isAddProductActive, setIsAddProductActive] = useState(false);
+	const [isEmployeeActive, setIsEmployeeActive] = useState(false);
+	const [isAddEmployeeActive, setIsAddEmployeeActive] = useState(false);
 
 	const handleProductsClick = () => {
 		setIsProductsActive(true);
-		setIsAddProductActive(false); // Ensure Add Product is not active when Products is clicked
+		setIsAddProductActive(false);
+		setIsEmployeeActive(false);
+		setIsAddEmployeeActive(false);
 	};
 
 	const handleAddProductClick = () => {
 		setIsAddProductActive(true);
+		setIsEmployeeActive(false);
+		setIsAddEmployeeActive(false);
+	};
+
+	const handleEmployeeClick = () => {
+		setIsAddProductActive(false);
+		setIsProductsActive(false);
+		setIsEmployeeActive(true);
+		setIsAddEmployeeActive(false);
+	};
+
+	const handleAddEmployeeClick = () => {
+		setIsAddProductActive(false);
+		setIsProductsActive(false);
+		setIsAddEmployeeActive(true);
 	};
 
 	const handleOtherLinksClick = () => {
 		setIsProductsActive(false);
 		setIsAddProductActive(false);
+		setIsEmployeeActive(false);
+		setIsAddEmployeeActive(false);
 	};
 
 	return (
@@ -37,7 +58,22 @@ export function Menu(): JSX.Element {
 						onClick={handleAddProductClick}
 						className={isAddProductActive ? "active" : ""}>
 						Add Product
-						<i className="gg-math-plus"></i>{" "}
+						<i className="gg-math-plus"></i>
+					</NavLink>
+				</React.Fragment>
+			)}
+			<NavLink to="/employees" end onClick={handleEmployeeClick}>
+				Employees
+				<i className="gg-user"></i>{" "}
+			</NavLink>
+			{isEmployeeActive && (
+				<React.Fragment>
+					<NavLink
+						to="/employees/new"
+						onClick={handleAddEmployeeClick}
+						className={isAddEmployeeActive ? "active" : ""}>
+						Add Employee
+						<i className="gg-math-plus"></i>
 					</NavLink>
 				</React.Fragment>
 			)}

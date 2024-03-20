@@ -19,12 +19,7 @@ class ProductService {
 
 	public async addProduct(product: ProductModel): Promise<void> {
 		const options = { headers: { "content-Type": "multipart/form-data" } };
-		const response = await axios.post<ProductModel>(
-			appConfig.productsUrl,
-			product,
-			options
-		);
-		const addedProduct = response.data;
+		await axios.post<ProductModel>(appConfig.productsUrl, product, options);
 	}
 
 	public async deleteProduct(id: number): Promise<void> {
@@ -33,12 +28,11 @@ class ProductService {
 
 	public async updateProduct(product: ProductModel): Promise<void> {
 		const options = { headers: { "content-Type": "multipart/form-data" } };
-		const response = await axios.put<ProductModel>(
+		await axios.put<ProductModel>(
 			appConfig.productsUrl + product.id,
 			product,
 			options
 		);
-		const updatedProduct = response.data;
 	}
 }
 
