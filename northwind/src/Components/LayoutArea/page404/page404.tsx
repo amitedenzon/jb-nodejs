@@ -1,6 +1,9 @@
+import useTitle from "../../../Utils/useTitle";
 import "./page404.css";
 
 export function Page404(): JSX.Element {
+	useTitle("404");
+
 	return (
 		<div className="page404">
 			<a href="https://codepen.io/uiswarup/full/vYPxywO" target="_blank">
@@ -10,7 +13,7 @@ export function Page404(): JSX.Element {
 					<div className="starsec"></div>
 					<div className="starthird"></div>
 					<div className="starfourth"></div>
-					<div className="starfifth"></div>
+					<div className="starfifth"></div> 
 				</div>
 
 				<div className="lamp__wrap">

@@ -4,8 +4,11 @@ import { productService } from "../../../Services/ProductService";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { ProductModel } from "../../../Models/ProductModel";
 import { notify } from "../../../Utils/Notify";
+import useTitle from "../../../Utils/useTitle";
 
 export function ProductList(): JSX.Element {
+	useTitle("Products");
+
 	const [products, setProducts] = useState<ProductModel[]>([]);
 
 	useEffect(() => {

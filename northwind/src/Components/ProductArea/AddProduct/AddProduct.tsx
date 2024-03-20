@@ -4,8 +4,11 @@ import "./AddProduct.css";
 import { ProductModel } from "../../../Models/ProductModel";
 import { productService } from "../../../Services/ProductService";
 import { notify } from "../../../Utils/Notify";
+import useTitle from "../../../Utils/useTitle";
 
 function AddProduct(): JSX.Element {
+	useTitle("Add Product");
+
 	const { register, handleSubmit, formState } = useForm<ProductModel>();
 	const navigate = useNavigate();
 

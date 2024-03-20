@@ -1,6 +1,9 @@
+import useTitle from "../../../Utils/useTitle";
 import "./About.css";
 
 export default function About(): JSX.Element {
+	useTitle("About");
+
 	return (
 		<div className="About">
 			<p>

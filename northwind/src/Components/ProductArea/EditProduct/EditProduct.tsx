@@ -5,8 +5,11 @@ import { ProductModel } from "../../../Models/ProductModel";
 import { productService } from "../../../Services/ProductService";
 import { notify } from "../../../Utils/Notify";
 import "./EditProduct.css";
+import useTitle from "../../../Utils/useTitle";
 
 export function EditProduct(): JSX.Element {
+	useTitle("Edit Product");
+
 	const { register, handleSubmit, formState, setValue, watch } =
 		useForm<ProductModel>();
 	const navigate = useNavigate();

@@ -20,10 +20,35 @@
 .Menu a {
 	display: flex;
 	align-items: center;
+	transition: all 0.3s ease; /* Add transition for smooth animation */
 }
 
 .Menu > a > i {
 	margin-left: 10px;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+
+.add-product {
+	animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 .gg-home-alt {

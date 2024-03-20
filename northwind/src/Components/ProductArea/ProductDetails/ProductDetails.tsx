@@ -5,20 +5,21 @@ import { ProductModel } from "../../../Models/ProductModel";
 import { useNavigate, useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { notify } from "../../../Utils/Notify";
+import useTitle from "../../../Utils/useTitle";
 
 export function ProductDetails(): JSX.Element {
 	const [product, setProduct] = useState<ProductModel>();
+	useTitle(`Product details`);
 
 	const navigate = useNavigate();
 	const params = useParams();
 	const id = +params.id!;
 
-	console.log(id);
-
 	useEffect(() => {
 		productService
 			.getOneProducts(id)
-			.then((dbProduct) => setProduct(dbProduct));
+			.then((dbProduct) => setProduct(dbProduct))
+			.catch((err) => notify.error(err));
 	}, []);
 
 	async function deleteMe() {
