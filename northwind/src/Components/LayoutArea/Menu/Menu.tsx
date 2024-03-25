@@ -6,17 +6,27 @@ export function Menu(): JSX.Element {
 	const [isProductsActive, setIsProductsActive] = useState(false);
 	const [isAddProductActive, setIsAddProductActive] = useState(false);
 	const [isEmployeeActive, setIsEmployeeActive] = useState(false);
+	const [isEditProductActive, setIsEditProductActive] = useState(false);
 	const [isAddEmployeeActive, setIsAddEmployeeActive] = useState(false);
 
 	const handleProductsClick = () => {
 		setIsProductsActive(true);
 		setIsAddProductActive(false);
+		setIsEditProductActive(false);
 		setIsEmployeeActive(false);
 		setIsAddEmployeeActive(false);
 	};
 
 	const handleAddProductClick = () => {
 		setIsAddProductActive(true);
+		setIsEditProductActive(false);
+		setIsEmployeeActive(false);
+		setIsAddEmployeeActive(false);
+	};
+
+	const handleEditProductClick = () => {
+		setIsEditProductActive(true);
+		setIsAddProductActive(false);
 		setIsEmployeeActive(false);
 		setIsAddEmployeeActive(false);
 	};
@@ -52,15 +62,24 @@ export function Menu(): JSX.Element {
 				<i className="gg-box"></i>
 			</NavLink>
 			{isProductsActive && (
-				<React.Fragment>
+				<>
 					<NavLink
 						to="/products/new"
+						end
 						onClick={handleAddProductClick}
 						className={isAddProductActive ? "active" : ""}>
 						Add Product
 						<i className="gg-math-plus"></i>
 					</NavLink>
-				</React.Fragment>
+					<NavLink
+						to="/products/edit"
+						end
+						onClick={handleEditProductClick}
+						className={isEditProductActive ? "active" : ""}>
+						Edit Product
+						<i className="gg-edit-markup"></i>
+					</NavLink>
+				</>
 			)}
 			<NavLink to="/employees" end onClick={handleEmployeeClick}>
 				Employees
